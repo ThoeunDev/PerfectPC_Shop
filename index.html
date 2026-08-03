@@ -181,7 +181,7 @@
   .prod-card:hover{ transform:translateY(-3px); box-shadow:0 16px 32px rgba(34,38,31,0.12); }
   .prod-thumb{
     background:var(--accent-soft); border-radius:12px;
-    height:130px; display:flex; align-items:center; justify-content:center;
+    aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;
     margin-bottom:14px; position:relative; overflow:hidden;
   }
   .prod-thumb svg{ width:64px; height:64px; }
@@ -219,7 +219,7 @@
     background:var(--accent-soft); display:flex; align-items:center; justify-content:center;
     margin-bottom:18px;
   }
-  .modal-img img{ width:100%; height:100%; object-fit:cover; }
+  .modal-img img{ width:100%; height:100%; object-fit:contain; }
   .modal-box h3{ font-size:20px; margin:0 0 12px; font-weight:800; }
   .modal-specs{ list-style:none; padding:0; margin:0 0 18px; }
   .modal-specs li{
