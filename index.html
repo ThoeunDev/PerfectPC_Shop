@@ -129,14 +129,40 @@
   .trust-row strong{ color:var(--ink); }
 
   /* hero illustration */
-  .stage{
-    position:relative; background:var(--surface);
-    border-radius:24px; padding:36px;
-    box-shadow:var(--shadow);
-    display:flex; align-items:center; justify-content:center;
-    min-height:320px;
+  .stage-wrap{ position:relative; }
+  .stage-wrap::before, .stage-wrap::after{
+    content:""; position:absolute; border-radius:50%;
+    background:radial-gradient(circle, rgba(255,255,255,0.9), rgba(255,255,255,0) 70%);
+    filter:blur(30px); pointer-events:none; z-index:0;
   }
-  .stage svg{ width:100%; max-width:340px; height:auto; }
+  .stage-wrap::before{
+    width:260px; height:260px;
+    top:-60px; left:-50px;
+    animation:smoke-drift-1 12s ease-in-out infinite;
+  }
+  .stage-wrap::after{
+    width:200px; height:200px;
+    bottom:-40px; right:-30px;
+    animation:smoke-drift-2 15s ease-in-out infinite;
+  }
+  @keyframes smoke-drift-1{
+    0%, 100%{ transform:translate(0,0) scale(1); opacity:0.5; }
+    50%{ transform:translate(20px,-25px) scale(1.15); opacity:0.25; }
+  }
+  @keyframes smoke-drift-2{
+    0%, 100%{ transform:translate(0,0) scale(1); opacity:0.4; }
+    50%{ transform:translate(-15px,20px) scale(1.2); opacity:0.2; }
+  }
+  .stage{
+    position:relative; z-index:1;
+    background:var(--surface);
+    border-radius:24px; overflow:hidden;
+    border:3px solid #8f8f81;
+    box-shadow:0 24px 48px rgba(126, 165, 58, 0.28);
+    display:flex; align-items:center; justify-content:center;
+    aspect-ratio:3/2;
+  }
+  .stage img{ width:100%; height:100%; object-fit:cover; }
 
   /* ---------- FEATURE STRIP ---------- */
   .features{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:32px 0; }
@@ -390,19 +416,10 @@
         </div>
       </div>
 
-      <div class="stage">
-        <svg viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="170" cy="268" rx="140" ry="18" fill="#EFEADA"/>
-          <rect x="60" y="150" width="130" height="90" rx="10" fill="#F1EDE0" stroke="#E7E2D3"/>
-          <rect x="100" y="60" width="140" height="95" rx="10" fill="#46532F"/>
-          <rect x="112" y="72" width="116" height="70" rx="4" fill="#3A4526"/>
-          <rect x="150" y="155" width="40" height="18" fill="#46532F"/>
-          <rect x="130" y="173" width="80" height="8" rx="4" fill="#7C8F5C"/>
-          <rect x="70" y="200" width="140" height="16" rx="8" fill="#3A4526"/>
-          <circle cx="255" cy="215" r="26" fill="#7C8F5C"/>
-          <path d="M245 215 q10 -18 20 0 q-10 18 -20 0" fill="#3A4526"/>
-          <rect x="238" y="238" width="8" height="20" fill="#7C8F5C"/>
-        </svg>
+      <div class="stage-wrap">
+        <div class="stage">
+          <img src="images/banner/banner_page.jpg" alt="Perfect Computer Shop">
+        </div>
       </div>
     </div>
   </section>
@@ -472,21 +489,21 @@
           <button class="add-btn" onclick="event.stopPropagation()">＋ Add to Cart</button>
         </div>
         <div class="prod-card" onclick="openProductModal(this)">
-          <div class="prod-thumb"><img src="images/laptop/laptop-latitude-5420.jpg" alt="Dell Latitude 5420" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/laptop-latitude-5420.jpg</div></div>
+          <div class="prod-thumb"><img src="images/laptop/laptop-latitude-5420.jpg" alt="Dell Latitude 5421" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/laptop-latitude-5420.jpg</div></div>
           <h4>Dell Latitude 5421</h4>
           <ul class="specs"><li>i7-11th · 16GB RAM</li><li>256GB M.2 · 14" IPS</li></ul>
           <div class="price-row"><span class="price">$399</span></div>
           <button class="add-btn" onclick="event.stopPropagation()">＋ Add to Cart</button>
         </div>
         <div class="prod-card" onclick="openProductModal(this)">
-          <div class="prod-thumb"><img src="images/monitors/p2419h.jpg" alt="Monitor 24" Slim Dell" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/monitor-24-slim.jpg</div></div>
+          <div class="prod-thumb"><img src="images/monitors/p2419h.jpg" alt="Monitor 24 inch Slim Dell" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/monitor-24-slim.jpg</div></div>
           <h4>Monitor 24" Slim Dell</h4>
           <ul class="specs"><li>Full HD display</li><li>Slim profile</li></ul>
           <div class="price-row"><span class="price">$109</span></div>
           <button class="add-btn" onclick="event.stopPropagation()">＋ Add to Cart</button>
         </div>
         <div class="prod-card" onclick="openProductModal(this)">
-          <div class="prod-thumb"><img src="images/monitors/e2219h.jpg" alt="Monitor 23" Dell" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/monitor-22.jpg</div></div>
+          <div class="prod-thumb"><img src="images/monitors/e2219h.jpg" alt="Monitor 23 inch Dell" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/monitor-22.jpg</div></div>
           <h4>Monitor 23" Dell</h4>
           <ul class="specs"><li>Reliable everyday display</li></ul>
           <div class="price-row"><span class="price">$85</span></div>
@@ -515,7 +532,7 @@
           <button class="add-btn" onclick="event.stopPropagation()">＋ Add to Cart</button>
         </div>
         <div class="prod-card" aria-hidden="true" onclick="openProductModal(this)">
-          <div class="prod-thumb"><img src="images/monitors/e2219h.jpg" alt="Monitor 22" Dell" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/monitor-22.jpg</div></div>
+          <div class="prod-thumb"><img src="images/monitors/e2219h.jpg" alt="Monitor 22 inch Dell" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/monitor-22.jpg</div></div>
           <h4>Monitor 22" Dell</h4>
           <ul class="specs"><li>Reliable everyday display</li></ul>
           <div class="price-row"><span class="price">$75</span></div>
