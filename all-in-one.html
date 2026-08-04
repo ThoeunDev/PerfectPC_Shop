@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>All in One — Perfect Computer Shop</title>
+<title>All in One  Perfect PC Shop</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
@@ -219,7 +219,7 @@
     background:var(--surface); display:flex; align-items:center; justify-content:center;
     margin-bottom:18px;
   }
-  .modal-img img{ width:100%; height:100%; object-fit:cover; }
+  .modal-img img{ width:100%; height:100%; object-fit:contain; }
   .modal-box h3{ font-size:20px; margin:0 0 12px; font-weight:800; }
   .modal-specs{ list-style:none; padding:0; margin:0 0 18px; }
   .modal-specs li{
@@ -351,7 +351,7 @@
   <div class="wrap nav-inner">
     <a href="#home" class="logo">
       <span class="logo-mark"><img src="images/logo.png" alt="Perfect Computer logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="logo-fallback">PC</span></span>
-      Perfect Computer
+      Perfect PC Shop
     </a>
     <nav aria-label="Main">
       <ul>
@@ -374,13 +374,13 @@
         <div>
           <a href="index.html#about" style="font-size:13.5px; font-weight:600; color:var(--accent); text-decoration:none;">← Back to Shop by Category</a>
           <h2 style="margin-top:14px;">All in One</h2>
-          <p style="color:var(--muted); font-size:14.5px; max-width:52ch; margin:8px 0 0;">Space-saving all-in-one PCs with built-in touchscreen displays.</p>
+          <p style="color:var(--muted); font-size:14.5px; max-width:52ch; margin:8px 0 0;">Space-saving all-in-one PCs with touchscreen and non-touchscreen displays.</p>
         </div>
       </div>
       <div class="prod-grid">
         <div class="prod-card" onclick="openProductModal(this)">
           <button class="wish" aria-label="Save item" onclick="event.stopPropagation()">♡</button>
-          <div class="prod-thumb"><img src="images/aio-dell-7470.jpg" alt="Dell 7470 AIO" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/aio-dell-7470.jpg</div></div>
+          <div class="prod-thumb"><img src="images/aio/DELL_7470_AIO_i7-9th.jpg" alt="Dell 7470 AIO" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/aio-dell-7470.jpg</div></div>
           <h4>Dell 7470 AIO</h4>
           <ul class="specs"><li>i7 · 16GB RAM · 256GB</li><li>24" Touchscreen</li></ul>
           <div class="price-row"><span class="price">$5xx</span></div>
@@ -388,9 +388,9 @@
         </div>
         <div class="prod-card" onclick="openProductModal(this)">
           <button class="wish" aria-label="Save item" onclick="event.stopPropagation()">♡</button>
-          <div class="prod-thumb"><img src="images/aio-lenovo-m910q.jpg" alt="Lenovo ThinkCentre M910Q" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/aio-lenovo-m910q.jpg</div></div>
+          <div class="prod-thumb"><img src="images/aio/aio_m910q_done.jpg" alt="Lenovo ThinkCentre M910Q" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="thumb-placeholder"><span class="icon">🖼️</span>Add photo:<br>images/aio-lenovo-m910q.jpg</div></div>
           <h4>Lenovo ThinkCentre M910Q</h4>
-          <ul class="specs"><li>i5 · 8GB RAM · 256GB</li><li>24" Touchscreen</li></ul>
+          <ul class="specs"><li>i5 · 8GB RAM · 256GB</li><li>24"inch IPS Slim</li></ul>
           <div class="price-row"><span class="price">$3xx</span></div>
           <button class="add-btn" onclick="event.stopPropagation()">＋ Add to Cart</button>
         </div>
@@ -404,13 +404,13 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a href="#home" class="logo" style="color:#EDEBE2;"><span class="logo-mark"><img src="images/logo.png" alt="Perfect Computer logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><span class="logo-fallback">PC</span></span>Perfect Computer</a>
-        <p>Good condition, good quality computers — monitors and parts, tested before they reach the shelf.</p>
+        <p>Good condition, good quality computers monitors and parts, tested before they reach the shelf.</p>
       </div>
 
       <div class="foot-col">
         <span class="label">Shop</span>
-        <p class="foot-line"><span>Address —</span> Phnom Penh, Cambodia</p>
-        <p class="foot-line"><span>Phone —</span> 014 891 097</p>
+        <p class="foot-line"><span>Address: </span> Phnom Penh, Cambodia</p>
+        <p class="foot-line"><span>Phone:  </span> 014 891 097</p>
       </div>
 
       <div class="foot-col">
@@ -427,7 +427,7 @@
     </div>
 
     <div class="foot-bottom">
-      <span>© 2026 Perfect Computer Shop, Phnom Penh</span>
+      <span>© 2026 Perfect PC Shop, Phnom Penh</span>
       <span>Grade A · Grade B stock updated weekly</span>
     </div>
   </div>
